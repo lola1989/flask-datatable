@@ -1,2 +1,0 @@
-# Python Flask Datatable application
-  
