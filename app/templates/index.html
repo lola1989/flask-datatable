@@ -1,0 +1,44 @@
+<html>
+<head>
+  <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+
+  <script src="https://cdn.datatables.net/1.10.4/js/jquery.dataTables.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.4/css/jquery.dataTables.min.css">
+</head>
+
+<body>
+<h1>Data Table</h1>
+<table id="datatable">
+  <thead>
+    <tr>
+      <th>Annual Salary</th>
+      <th>Department</th>
+      <th>Full or Part Time</th>
+      <th>Job Titles</th>
+      <th>Name</th>
+      <th>Salary or Hourly</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for record in records %}
+    <tr>
+      <td>{{record['annual_salary']}}</td>
+      <td>{{record['department']}}</td>
+      <td>{{record['full_or_part_time']}}</td>
+      <td>{{record['job_titles']}}</td>
+      <td>{{record['name']}}</td>
+      <td>{{record['salary_or_hourly']}}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+
+</table>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#datatable').dataTable();
+    });
+</script>
+
+</body>
+</html>
